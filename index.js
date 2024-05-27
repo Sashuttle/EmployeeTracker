@@ -1,7 +1,6 @@
 //Note: Dependencies needed for this application
 const inquirer = require('inquirer');
 const mysql = require('mysql');
-const cTable = require ('console.table');
 
 //
 const business_db = mysql.createConnection(
@@ -49,7 +48,72 @@ const role = [
     {
         type: 'list',
         message: 'What department ID goes to the new role?',
-        choices: ['01', '02', '03', '04', '05', '06'],
+        choices: ['01', '02', '03', '04'],
         name: 'departmentId',
     },
 ]
+
+//Employee Questions
+const employee = [
+    {
+        type: 'input',
+        message: "What is the first name of the employee?",
+        name: 'firstName'
+    },
+
+    {
+        type: 'input',
+        message: "What is the last name of the employee?",
+        name: 'lastName'
+    },
+
+    {
+        type: 'input',
+        message: "What is their role title?",
+        name: 'roleTitle'
+    },
+
+    {
+        type: 'input',
+        message: "What is the manager ID for the employee?",
+        name: 'managerId'
+    },
+
+    {
+        type: 'list',
+        message: "What is the role ID for the new employee?",
+        choices:['01', '02', '03', '04', '05'],
+        name: 'roleId'
+    },
+]
+
+//update question
+const update = [
+    {
+        type: 'input',
+        message: "What is the employee ID number?",
+        name: 'idNum'
+    },
+
+    {
+        type: 'input',
+        message: "What is their new job title?",
+        name: 'updateTitle'
+    }
+]
+
+//Prompt questions
+const question = () => {
+    return inquirer
+    .prompt(options)
+    .then((data) => {
+        if (data.menuOptions == "Add a Department") {
+            addDepartment();
+        } else if (data.menuOptions == "Add a Role") {
+            addRole();
+        } else if (data.menuOptions == "Add an Employee") {
+            addEmployee();
+        } else if (data.menuOptions == "Add an Employee") {
+            addEmployee();
+}});
+}
