@@ -1,10 +1,10 @@
 --Department Information including assigned id and department name
 INSERT INTO department(id, department_name)
 VALUES
-('Sales'),
-('Claims'),
-('Legal'),
-('Warehouse');
+(01, 'Sales'),
+(02, 'Claims'),
+(03, 'Legal'),
+(04, 'Warehouse');
 
 --Role information including the assigned id number to that role, name of role, salary, and the corresponding department id that goes with the role
 INSERT INTO role (id, title, salary, department_id)
@@ -25,7 +25,7 @@ VALUES
 --Adding new values into the department table
 INSERT INTO department(department_name)
 VALUES
-('New Department');
+(newDepartment);
 
 --Adding new values into the role table
 INSERT INTO role(title, salary, department_id)
