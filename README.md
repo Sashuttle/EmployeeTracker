@@ -1,5 +1,5 @@
 # EmployeeTracker
-Challenge 12
+Challenge 12 Employee Tracker is a SQL database that will allow the user to view different departments, roles within the company, and employees.  The user will also be able to add a new department, role, and employee.  The user should also be able to update an employee job title. 
 
 ## Technologies & Applications Used
 Visual Studio Code -
@@ -41,7 +41,10 @@ Dotenv is a zero dependency module that loads environment variables from a .env 
 
 
 ## Acknowledgements
+I appreciate the fact that UT created the xpert learning assitant bot, because it helped me walk through several of my code errors and i understood how to fix it.  Same with chat gpt when I could not understand xpert! 
+I would also like to thank my brother in law, John, who looked over my code with me and confirmed that it did look good.  I appreciate his help in trying to help me reset mysql password.
 
 ## Video URL 
 
 ## Contact Info
+https://github.com/Sashuttle
